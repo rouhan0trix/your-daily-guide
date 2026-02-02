@@ -22,7 +22,7 @@ const MaterialInputs = ({ disabled }: MaterialInputsProps) => {
       <h3 className="section-title">Material Inputs</h3>
 
       <div className="space-y-2">
-        {/* Girder */}
+     
         <div className="input-row">
           <label className="input-label">Girder</label>
           <Select
@@ -43,7 +43,6 @@ const MaterialInputs = ({ disabled }: MaterialInputsProps) => {
           </Select>
         </div>
 
-        {/* Cross Bracing */}
         <div className="input-row">
           <label className="input-label">Cross Bracing</label>
           <Select
@@ -64,7 +63,7 @@ const MaterialInputs = ({ disabled }: MaterialInputsProps) => {
           </Select>
         </div>
 
-        {/* Deck */}
+  
         <div className="input-row">
           <label className="input-label">Deck</label>
           <Select
