@@ -1,5 +1,4 @@
-// Hardcoded data for 5 major Indian cities
-// Based on IRC 6 (2017) reference tables
+
 
 export interface CityData {
   state: string;
@@ -75,13 +74,9 @@ export const getCityData = (state: string, district: string): CityData | undefin
   );
 };
 
-// Material grades
+
 export const girderGrades = ["E250", "E350", "E450"];
 export const crossBracingGrades = ["E250", "E350", "E450"];
 export const deckConcreteGrades = ["M25", "M30", "M35", "M40", "M45", "M50", "M55", "M60"];
-
-// Structure types
 export const structureTypes = ["Highway", "Other"];
-
-// Footpath options
 export const footpathOptions = ["None", "Single-sided", "Both"];
