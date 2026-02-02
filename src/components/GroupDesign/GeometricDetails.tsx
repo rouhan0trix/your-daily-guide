@@ -27,17 +27,16 @@ const GeometricDetails = ({
   const [skewAngle, setSkewAngle] = useState<string>("0");
   const [showGeometryDialog, setShowGeometryDialog] = useState(false);
 
-  // Validation errors
+  
   const [spanError, setSpanError] = useState<string>("");
   const [carriageError, setCarriageError] = useState<string>("");
   const [skewError, setSkewError] = useState<string>("");
 
-  // Geometry values from popup
   const [girderSpacing, setGirderSpacing] = useState<number>(2.5);
   const [numberOfGirders, setNumberOfGirders] = useState<number>(4);
   const [deckOverhang, setDeckOverhang] = useState<number>(1.5);
 
-  // Validate span
+  
   useEffect(() => {
     const spanVal = parseFloat(span);
     if (isNaN(spanVal)) {
@@ -49,7 +48,7 @@ const GeometricDetails = ({
     }
   }, [span]);
 
-  // Validate carriageway width
+  
   useEffect(() => {
     if (isNaN(carriageWayWidth)) {
       setCarriageError("");
@@ -60,7 +59,7 @@ const GeometricDetails = ({
     }
   }, [carriageWayWidth]);
 
-  // Validate skew angle
+
   useEffect(() => {
     const angleVal = parseFloat(skewAngle);
     if (isNaN(angleVal)) {
@@ -111,7 +110,7 @@ const GeometricDetails = ({
           {spanError && <p className="error-message">{spanError}</p>}
         </div>
 
-        {/* Carriageway Width */}
+      
         <div>
           <div className="input-row">
             <label className="input-label">Carriageway Width (m):</label>
@@ -129,7 +128,6 @@ const GeometricDetails = ({
           {carriageError && <p className="error-message">{carriageError}</p>}
         </div>
 
-        {/* Footpath */}
         <div className="input-row">
           <label className="input-label">Footpath:</label>
           <Select value={footpath} onValueChange={setFootpath} disabled={disabled}>
@@ -146,7 +144,7 @@ const GeometricDetails = ({
           </Select>
         </div>
 
-        {/* Skew Angle */}
+    
         <div>
           <div className="input-row">
             <label className="input-label">Skew Angle (degrees):</label>
@@ -164,7 +162,6 @@ const GeometricDetails = ({
           {skewError && <p className="error-message">{skewError}</p>}
         </div>
 
-        {/* Display current geometry values */}
         {(girderSpacing > 0 || numberOfGirders > 0) && (
           <div className="mt-3 pt-2 border-t border-border">
             <p className="text-xs text-muted-foreground mb-1">Current Geometry:</p>
